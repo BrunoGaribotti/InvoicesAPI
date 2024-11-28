@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BAEnergy_API
+namespace Invoices_API
 {
     static class Program
     {

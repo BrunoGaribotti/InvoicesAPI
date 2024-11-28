@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Negocio
 {
     /// <summary>
-    /// Objeto de Retorno - Devolución de Recibo al sistema BAEnergy.
+    /// Objeto de Retorno - Devolución de Recibo al sistema Invoices.
     /// </summary>
     public class RetornoRecibo
     {

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9C636B69-6FA8-4101-9439-407D6E776165}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BAEnergy_API</RootNamespace>
-    <AssemblyName>BAEnergy-API</AssemblyName>
+    <RootNamespace>Invoices_API</RootNamespace>
+    <AssemblyName>Invoices-API</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

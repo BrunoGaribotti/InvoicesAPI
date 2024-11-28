@@ -1,4 +1,4 @@
-﻿namespace BAEnergy_API
+﻿namespace Invoices_API
 {
     partial class ProjectInstaller
     {
@@ -39,9 +39,9 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "zzBaEnergyAPI";
-            this.serviceInstaller1.DisplayName = "zzBaEnergyAPI";
-            this.serviceInstaller1.ServiceName = "zzBaEnergyAPI";
+            this.serviceInstaller1.Description = "zzInvoicesAPI";
+            this.serviceInstaller1.DisplayName = "zzInvoicesAPI";
+            this.serviceInstaller1.ServiceName = "zzInvoicesAPI";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceProcess;
-using BAEnergy_API;
+using Invoices_API;
 
 namespace Probador
 {
@@ -17,7 +17,7 @@ namespace Probador
         {
             Servicio cw = new Servicio();
             cw.Iniciar();
-            Console.WriteLine("Servicio BAEnergy Activado.");
+            Console.WriteLine("Servicio Invoices Activado.");
             Console.WriteLine();
             Console.WriteLine("<Presione una tecla para Salir>");
             Console.ReadKey();

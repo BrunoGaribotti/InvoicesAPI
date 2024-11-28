@@ -1,4 +1,4 @@
-﻿namespace BAEnergy_API
+﻿namespace Invoices_API
 {
     partial class Servicio
     {

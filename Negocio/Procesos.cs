@@ -393,14 +393,14 @@ namespace Negocio
         }
 
         /// <summary>
-        /// Envía los recibos al sistema BAEnergy.
+        /// Envía los recibos al sistema Invoices.
         /// </summary>
         public List<RetornoRecibo> EnviarRecibos(List<Recibo> cRecibos)
         {
             ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(
                delegate { return true; }
             );
-            //URL del webservice del BAEnergy
+            //URL del webservice del Invoices
             //var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/RecibirConsultas"); //CAMBIAR
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://bundat102/WEBS/GuardarRecibosWS.php");
             //var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://190.210.251.35:8082/WEBS/GuardarRecibosWS.php");
@@ -452,14 +452,14 @@ namespace Negocio
         }
 
         /// <summary>
-        /// Envía las facturas al sistema BAEnergy.
+        /// Envía las facturas al sistema Invoices.
         /// </summary>
         public List<RetornoFactura> EnviarFacturas(List<Factura> cFacturas)
         {
             ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(
                 delegate { return true; }
             );
-            //URL del webservice del BAEnergy
+            //URL del webservice del Invoices
             //var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/RecibirFacturas"); //CAMBIAR
             var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://bundat102/WEBS/GuardarFacturasWS.php");
             //var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://190.210.251.35:8082/WEBS/GuardarFacturasWS.php");
@@ -524,7 +524,7 @@ namespace Negocio
                 log.WriteLine("Recibos - Fase 1 - Completada " + DateTime.Now.ToString("hh:mm:ss"));
                 if (cRecibos.Count != 0)
                 {
-                    //se lo enviamos a baenergy y consumimos su webservice
+                    //se lo enviamos a Invoices y consumimos su webservice
                     List<RetornoRecibo> Retor = EnviarRecibos(cRecibos);
                     log.WriteLine("Recibos - Fase 2 - Completada " + DateTime.Now.ToString("hh:mm:ss"));
                     foreach (RetornoRecibo R in Retor)
@@ -553,8 +553,8 @@ namespace Negocio
         public void ConsumirBAFacturas(BaseDeDatos db, System.IO.StreamWriter log)
         {
             //Consultar si hay facturas nuevas
-            //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Users\bruno\source\repos\BAEnergy-API\Probador\bin\Debug\FacturasLog.txt", true);
-            //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Gestion\BAEnergy-API\FacturasLog.txt", true);
+            //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Users\bruno\source\repos\Invoices-API\Probador\bin\Debug\FacturasLog.txt", true);
+            //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Gestion\Invoices-API\FacturasLog.txt", true);
             try
             {
                 string marca;
@@ -564,7 +564,7 @@ namespace Negocio
                 log.WriteLine("Facturas - Fase 1 - Completada " + DateTime.Now.ToString("hh:mm:ss"));
                 if (cFacturas.Count != 0)
                 {
-                    //Se lo enviamos a BAEnergy y consumimos su webservice
+                    //Se lo enviamos a Invoices y consumimos su webservice
                     List<RetornoFactura> Retor = EnviarFacturas(cFacturas);
                     log.WriteLine("Facturas - Fase 2 - Completada " + DateTime.Now.ToString("hh:mm:ss"));
                     foreach (RetornoFactura R in Retor)

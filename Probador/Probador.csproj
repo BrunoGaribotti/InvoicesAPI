@@ -61,9 +61,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BAEnergy-API\BAEnergy-API.csproj">
+    <ProjectReference Include="..\Invoices-API\Invoices-API.csproj">
       <Project>{9c636b69-6fa8-4101-9439-407d6e776165}</Project>
-      <Name>BAEnergy-API</Name>
+      <Name>Invoices-API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

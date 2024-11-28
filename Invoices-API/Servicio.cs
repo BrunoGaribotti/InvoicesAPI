@@ -14,7 +14,7 @@ using System.ServiceModel.Web;
 using Negocio.PlantillasRecibidas;
 using System.IO;
 
-namespace BAEnergy_API
+namespace Invoices_API
 {
     public partial class Servicio : ServiceBase
     {
@@ -49,8 +49,8 @@ namespace BAEnergy_API
 
             while (true)
             {
-                System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Gestion\BAEnergy-API\Log.txt", true); //CAMBIAR
-                //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Users\bruno\source\repos\BAEnergy-API\Probador\bin\Debug\Log.txt", true);
+                System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Gestion\Invoices-API\Log.txt", true); //CAMBIAR
+                //System.IO.StreamWriter log = new System.IO.StreamWriter(@"C:\Users\bruno\source\repos\Invoices-API\Probador\bin\Debug\Log.txt", true);
                 log.WriteLine(msgXML);
                 try { oProc.ConsumirBARecibos(db, log); }
                 catch (Exception e)
@@ -69,11 +69,11 @@ namespace BAEnergy_API
                 try
                 {
                     //Check if file exists with its full path
-                    if (File.Exists(@"C:\Gestion\BAEnergy-API\Log.txt"))
+                    if (File.Exists(@"C:\Gestion\Invoices-API\Log.txt"))
                     {
                         // If file found, delete it    
                         //File.Delete("Log.txt");
-                        File.Delete(@"C:\Gestion\BAEnergy-API\Log.txt");
+                        File.Delete(@"C:\Gestion\Invoices-API\Log.txt");
                     }
                 }
                 catch (Exception e)
